@@ -3,7 +3,7 @@ import net.nosadnile.gradle.minecraft.server.tasks.LaunchMinecraftServerTask.Jar
 
 plugins {
     java
-    id("net.nosadnile.gradle.minecraft.server")
+    id("net.nosadnile.gradle.minecraft.server.plugin")
 }
 
 repositories {
