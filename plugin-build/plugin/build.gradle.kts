@@ -13,8 +13,8 @@ publishing {
             url = uri("https://maven.pkg.github.com/nosadnile/minecraft-server-gradle-plugin")
 
             credentials {
-                username = System.getenv("GITHUB_ACTOR")
-                password = System.getenv("GITHUB_TOKEN")
+                username = System.getProperty("github.user")
+                password = System.getProperty("github.token")
             }
         }
     }
@@ -72,5 +72,19 @@ tasks.create("setupPluginUploadFromEnvironment") {
 
         System.setProperty("gradle.publish.key", key)
         System.setProperty("gradle.publish.secret", secret)
+    }
+}
+
+tasks.create("setupGitHubFromEnv") {
+    doLast {
+        val actor = System.getenv("GITHUB_ACTOR")
+        val token = System.getenv("GITHUB_TOKEN")
+
+        if (actor == null || token == null) {
+            throw GradleException("GITHUB_ACTOR and/or GITHUB_TOKEN are not defined environment variables")
+        }
+
+        System.setProperty("github.user", actor)
+        System.setProperty("github.token", token)
     }
 }
