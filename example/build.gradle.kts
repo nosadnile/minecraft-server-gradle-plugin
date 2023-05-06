@@ -1,9 +1,9 @@
-import dev.s7a.gradle.minecraft.server.tasks.LaunchMinecraftServerTask
-import dev.s7a.gradle.minecraft.server.tasks.LaunchMinecraftServerTask.JarUrl
+import net.nosadnile.gradle.minecraft.server.tasks.LaunchMinecraftServerTask
+import net.nosadnile.gradle.minecraft.server.tasks.LaunchMinecraftServerTask.JarUrl
 
 plugins {
     java
-    id("dev.s7a.gradle.minecraft.server")
+    id("net.nosadnile.gradle.minecraft.server")
 }
 
 repositories {
@@ -31,7 +31,7 @@ task<LaunchMinecraftServerTask>("testPlugin") {
         }
     }
 
-    jarUrl.set(JarUrl.Paper("1.19.2"))
+    jarUrl.set(JarUrl.Purpur("1.19.2"))
     agreeEula.set(true)
 }
 

@@ -5,6 +5,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("dev.s7a.gradle.minecraft.server")
+rootProject.name = ("net.nosadnile.gradle.minecraft.server")
 
 include(":plugin")
