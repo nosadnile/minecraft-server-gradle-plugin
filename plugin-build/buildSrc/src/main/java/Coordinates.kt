@@ -1,6 +1,6 @@
 object PluginCoordinates {
     const val ID = "net.nosadnile.gradle.minecraft.server"
-    const val GROUP = "net.nosadnile.gradle.minecraft.server"
+    const val GROUP = "net.nosadnile.gradle.minecraft"
     const val VERSION = "3.0.0"
     const val IMPLEMENTATION_CLASS = "net.nosadnile.gradle.minecraft.server.MinecraftServerPlugin"
 }
