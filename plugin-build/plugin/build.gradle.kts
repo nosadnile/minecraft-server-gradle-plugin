@@ -35,6 +35,7 @@ gradlePlugin {
     plugins {
         create(PluginCoordinates.ID) {
             id = PluginCoordinates.ID
+            group = PluginCoordinates.GROUP
             implementationClass = PluginCoordinates.IMPLEMENTATION_CLASS
             version = PluginCoordinates.VERSION
         }
