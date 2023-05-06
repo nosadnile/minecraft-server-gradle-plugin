@@ -3,6 +3,21 @@ plugins {
     kotlin("plugin.serialization") version "1.8.21"
     id("java-gradle-plugin")
     id("com.gradle.plugin-publish")
+    id("maven-publish")
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/nosadnile/minecraft-server-gradle-plugin")
+
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
 
 dependencies {
